@@ -6,5 +6,6 @@ library(stringr)
 Dirty.Data <- read.csv("dirty_data.csv",  header=T, na.strings=c("","NA"))
 
 # Replace NA in Area column with previous not NULL value
-Area.Val<- transform(Dirty.Data, Area = na.locf(Area))
-clean_data$Area <- Area.Val
+Dirty.Data<- transform(Dirty.Data, Area = na.locf(Area))
+clean_data$Area <- Dirty.Data$Area
+write.csv(clean_data, file="clean_data.csv")
