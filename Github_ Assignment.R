@@ -48,3 +48,8 @@ while(i < NROW(clean_data))
   }
   i <- i+1
 }
+
+install.packages("dplyr")
+library(dplyr)
+data(clean_data)
+select(clean_data, Strange.HTML)
