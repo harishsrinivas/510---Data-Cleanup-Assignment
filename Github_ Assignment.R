@@ -1,5 +1,4 @@
 # 5. Remove the “Strange HTML column”
-install.packages("dplyr")
-library(dplyr)
-data(clean_data)
-select(clean_data, Strange.HTML)
+columns <- 1:4
+clean_data <- subset(clean_data[,1:4])
+head(clean_data)
